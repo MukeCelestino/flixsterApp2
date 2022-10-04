@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/posterView"
+        android:layout_width="196dp"
+        android:layout_height="251dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".35" />
+
+    <ImageView
+        android:id="@+id/person_Image"
+        android:layout_width="210dp"
+        android:layout_height="253dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toStartOf="@+id/posterView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".35" />
+
+    <TextView
+        android:id="@+id/person_name"
+        android:layout_width="163dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/person_Image" />
+
+    <TextView
+        android:id="@+id/knownFor"
+        android:layout_width="101dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:text="Known For:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/person_name"
+        tools:layout_editor_absoluteX="22dp" />
+
+    <TextView
+        android:id="@+id/movieTitleTV"
+        android:layout_width="241dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:text="movie Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toEndOf="@+id/knownFor"
+        app:layout_constraintTop_toBottomOf="@+id/person_name" />
+
+    <TextView
+        android:id="@+id/overviewTv"
+        android:layout_width="353dp"
+        android:layout_height="392dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="Overview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.379"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movieTitleTV"
+        app:layout_constraintVertical_bias="0.625" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
